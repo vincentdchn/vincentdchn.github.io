@@ -1,1 +1,264 @@
-Hello World
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#1a324c">
+  <meta name="msapplication-navbutton-color" content="#1a324c">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="description"
+    content="Vincent Duchêne is a new developer from Paris, France.">
+  <link rel="stylesheet" href="static/css/main.css" />
+  <link rel="stylesheet" href="static/css/index.css" />
+  <link rel="apple-touch-icon" sizes="180x180" href="static/images/favicon/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="static/images/favicon/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="static/images/favicon/favicon-16x16.png" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" />
+  <link href="styles.css" rel="stylesheet">
+
+  <title>Vincent Duchêne: Freshly new Developer</title>
+</head>
+
+<body>
+  <header>
+    <div class="fixed-header animate-background">
+      <div class="container header-container">
+        <div class="logo-container">
+          <span class="logo animate-logo">Vincent Duchêne</span>
+        </div>
+        <div class="header-text">
+          <h1>
+            <p class="animate-text-1">Freshly new Developer 🌱</p>
+            <p class="animate-text-2">Actually learning with O'Clock.</p>
+          </h1>
+        </div>
+        <h2 class="animate-subtitle">
+          This i where I say that I build websites.
+        </h2>
+        <div class="scroll-button animate-scroll" tabindex="0">
+          <div class="arrow">↓</div> scroll to find more stuff about me
+        </div>
+      </div>
+    </div>
+  </header>
+  <nav>
+    <div class="container">
+      <a href="/" class="nav-logo" title="Back to Homepage">
+        Vincent Duchêne
+      </a>
+      <div class="nav-links">
+        <a href="/#contact" class="link">contact</a>
+        <div class="social-media">
+          <a href="https://www.github.com/vincentdchn" title="Github">
+            <i class="demo-icon icon-github-circled"></i>
+          </a>
+          <a href="https://www.twitter.com/vincentdchn" title="Twitter">
+            <i class="demo-icon icon-twitter"></i>
+          </a>
+          <a href="https://www.linkedin.com/in/vincent-duchêne-18b04597" title="LinkedIn">
+            <i class="demo-icon icon-linkedin"></i>
+          </a>
+        </div>
+      </div>
+      <div class="nav-controls">
+        <button id="menu-display" title="Show Menu" class="hamburger"></button>
+        <button id="theme-display" title="Select a color scheme" class="control">
+          <i class="demo-icon icon-cog"></i>
+        </button>
+      </div>
+      <div class="theme-container">
+        <button class="light theme-select" id="light-select" onclick="setTheme('light')" aria-label="Set light theme">
+          <div class="theme-label">
+            Light
+          </div>
+          <div class="theme">
+            <div class="color background"></div>
+            <div class="color shade-100"></div>
+            <div class="color shade-300"></div>
+            <div class="color shade-500"></div>
+            <div class="color text"></div>
+          </div>
+        </button>
+        <button class="dark theme-select" id="dark-select" onclick="setTheme('dark')"
+          onkeydown="(e) => setThemeKey(e, 'dark')" aria-label="Set dark theme">
+          <div class="theme-label">
+            Dark
+          </div>
+          <div class="theme">
+            <div class="color background"></div>
+            <div class="color shade-100"></div>
+            <div class="color shade-300"></div>
+            <div class="color shade-500"></div>
+            <div class="color text"></div>
+          </div>
+        </button>
+        <button class="brown theme-select" id="brown-select" onclick="setTheme('brown')" aria-label="Set brown theme">
+          <div class="theme-label">
+            Brown
+          </div>
+          <div class="theme">
+            <div class="color background"></div>
+            <div class="color shade-100"></div>
+            <div class="color shade-300"></div>
+            <div class="color shade-500"></div>
+            <div class="color text"></div>
+          </div>
+        </button>
+        <button class="green theme-select" id="green-select" onclick="setTheme('green')" aria-label="Set green theme">
+          <div class="theme-label">
+            Green
+          </div>
+          <div class="theme">
+            <div class="color background"></div>
+            <div class="color shade-100"></div>
+            <div class="color shade-300"></div>
+            <div class="color shade-500"></div>
+            <div class="color text"></div>
+          </div>
+        </button>
+        <button class="pink theme-select" id="pink-select" onclick="setTheme('pink')" aria-label="Set pink theme">
+          <div class="theme-label">
+            Pink
+          </div>
+          <div class="theme">
+            <div class="color background"></div>
+            <div class="color shade-100"></div>
+            <div class="color shade-300"></div>
+            <div class="color shade-500"></div>
+            <div class="color text"></div>
+          </div>
+        </button>
+        <button class="neon theme-select" id="neon-select" onclick="setTheme('neon')" aria-label="Set pink theme">
+          <div class="theme-label">
+            Neon
+          </div>
+          <div class="theme">
+            <div class="color background"></div>
+            <div class="color shade-100"></div>
+            <div class="color shade-300"></div>
+            <div class="color shade-500"></div>
+            <div class="color text"></div>
+          </div>
+        </button>
+      </div>
+    </div>
+  </nav>
+  <main>
+    <section id="about">
+      <div class="container inner-container">
+        <div class="intro scroll-in">
+          <h2 class="section-title">Hello, I'm Vincent Duchêne <span class="title-icon">&#128578;</span></h2>
+          <div class="section-subtitle">
+            <p> I’m an ex D.I.T in the film industry and freshly new Developer.</p>
+            <p>
+              I'm learning web development with O'Clock. </p>
+              <p>We are currently working on : Git.</p>
+          </div>
+          <div class="section-link">
+            <a href="" class="link-btn">More About Me (soon)</a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div class="wave-border top">
+      <svg viewBox="0 0 500 150" preserveAspectRatio="none" style="height: 100%; width: 100%;">
+        <path d="M0.00,49.98 C149.99,150.00 349.20,-49.98 500.00,49.98 L500.00,150.00 L0.00,150.00 Z"
+          style="stroke: none; fill: var(--shade-100)"></path>
+        <path class="neon-path" d="M0.00,49.98 C149.99,150.00 349.20,-49.98 500.00,49.98"
+          style="stroke: var(--neon-color);fill: none;"></path>
+      </svg>
+    </div>
+    <section id="projects">
+      <div class="container">
+        <div class="title-container scroll-in">
+          <h2 class="section-title">Projects that I've been working on <span class="title-icon">&#128187;</span></h2>
+          <p class="section-subtitle">
+            I don't have any projects yet but they will be displaying here:
+          </p>
+        </div>
+        <div class="project-container">
+        </div>
+      </div>
+    </section>
+    <div class="wave-border bottom">
+      <svg viewBox="0 0 500 150" preserveAspectRatio="none" style="height: 100%; width: 100%;">
+        <path d="M0.00,49.98 C149.99,150.00 271.49,-49.98 500.00,49.98 L500.00,0.00 L0.00,0.00 Z"
+          style="stroke: none; fill: var(--shade-100);"></path>
+        <path class="neon-path" d="M0.00,49.98 C149.99,150.00 271.49,-49.98 500.00,49.98"
+          style="stroke: var(--neon-color); fill: none;"></path>
+      </svg>
+    </div>
+    <section id="contact">
+      <div class="container">
+        <div class="title-container scroll-in">
+          <h2 class="section-title">Contact <span class="title-icon">&#128231;</span></h2>
+          <p class="section-subtitle">
+            If you want to work with me or just say hi !          
+          </p>
+        </div>
+        <div class="contact-content">
+          <div class="form-container scroll-in">
+            <noscript>This form won't work without JavaScript but you can send me a message on <a
+                href="https://twitter.com/messages/compose?recipient_id=2294011996"
+                style="text-decoration: underline;">Twitter</a> or <a href="https://www.linkedin.com/in/vincent-duchêne-18b04597"
+                style="text-decoration: underline;">LinkedIn</a>.</noscript>
+            <p class="success-message"></p>
+            <form name="contact" method="POST" data-netlify="true" action="/?success#contact">
+              <div class="input-container">
+                <input type="text" id="name" name="name" required class="form-input" />
+                <label for="name">Name:</label>
+              </div>
+              <div class="input-container">
+                <input type="email" id="email" name="email" required class="form-input" />
+                <label for="email">Email:</label>
+              </div>
+              <div class="input-container">
+                <input type="text" id="subject" name="subject" class="form-input" />
+                <label for="subject">Subject (optional):</label>
+              </div>
+              <div class="input-container">
+                <textarea required maxlength="1000" id="message" name="message" class="form-input"></textarea>
+                <label for="message">Message:<br> </label>
+                <small>
+                  <span id="message-count">1000</span> characters
+                </small>
+              </div>
+              <div>
+                <button type="submit" class="link-btn">Send</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <div class="wave-border top">
+    <svg viewBox="0 0 500 150" preserveAspectRatio="none" style="height: 100%; width: 100%;">
+      <path d="M0.00,49.98 C149.99,150.00 349.20,-49.98 500.00,49.98 L500.00,150.00 L0.00,150.00 Z"
+        style="stroke: none; fill: var(--shade-100)"></path>
+      <path class="neon-path" d="M0.00,49.98 C149.99,150.00 349.20,-49.98 500.00,49.98"
+        style="stroke: var(--neon-color);fill: none;"></path>
+    </svg>
+  </div>
+  <footer>
+    <div class="container">
+      <div class="social-media">
+        <a href="https://www.github.com/vincentdchn" title="Github">
+          <i class="demo-icon icon-github-circled"></i>
+        </a>
+        <a href="https://www.twitter.com/vincentdchn" title="Twitter">
+          <i class="demo-icon icon-twitter"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/vincent-duchêne-18b04597" title="LinkedIn">
+          <i class="demo-icon icon-linkedin"></i>
+        </a>
+      </div>
+    </div>
+  </footer>
+</body>
+
+<script src="./static/js/index.js"></script>
+<script src="./static/js/landing-page.js"></script>
+
+</html>
